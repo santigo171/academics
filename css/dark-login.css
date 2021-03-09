@@ -1,0 +1,48 @@
+html {
+  background-color: #121212;
+}
+
+.toggle-mode {
+  background-color: rgba(221, 221, 221, 0.411);
+}
+
+.background {
+  background-image: url(../img/dark-background.jpg);
+}
+
+.logo-img {
+  filter: brightness(140%);
+}
+
+@media (min-width: 550px) {
+  .logo-img {
+    max-height: unset;
+    height: 90%;
+  }
+}
+
+.logo-p {
+  color: var(--national-white);
+}
+
+.form {
+  background-color: rgba(255, 255, 255, 0.856);
+}
+
+.form-input-box {
+  width: 100%;
+  height: 30px;
+
+  margin: 15px 0;
+
+  position: relative;
+}
+
+footer {
+  background-color: #5c5c5c00;
+}
+
+.toggle-mode > .ball {
+  left: unset;
+  right: 2px;
+}

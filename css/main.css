@@ -1,0 +1,91 @@
+:root {
+  --academics-gray: #5c5c5c;
+  --academics-blue: #266884;
+  --deeper-blue: #3587aa;
+  --sky-blue: #c3e0f8;
+  --national-white: rgb(234, 255, 255);
+}
+
+.center {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+
+header {
+  height: 100%;
+  width: 100%;
+  padding: 0 30px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-items: center;
+}
+
+.toggle-mode {
+  height: 20px;
+  width: 36px;
+  border-radius: 50px;
+  padding: 3.5px;
+
+  position: relative;
+  transform: scale(1.5);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgba(17, 17, 17, 0.411);
+  cursor: pointer;
+}
+
+.toggle-mode > .ball {
+  display: block;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+
+  background-color: #fff;
+}
+
+.toggle-mode > .light,
+.toggle-mode > .dark {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.light {
+  background-image: url(../img/sun.png);
+}
+
+.dark {
+  background-image: url(../img/night.png);
+}
