@@ -1,3 +1,6 @@
+// Functions
+
+// Autentication
 const username_input = document.getElementById("username");
 const password_input = document.getElementById("password");
 const summit = document.getElementById("form-summit");
@@ -24,14 +27,24 @@ summit.addEventListener('click', () => {
 // Toggle Mode button
 const toggleMode_div = document.getElementById("toggle-mode");
 const styleSheet_link = document.getElementById("dark-stylesheet");
-let currentPageMode = 'light';
 
-toggleMode_div.addEventListener('click', () => {
+let currentPageMode = localStorage.getItem('pageMode');
+
+function changePadeMode() {
     if (currentPageMode == 'light') {
         styleSheet_link.setAttribute('href', './css/dark-login.css');
-        currentPageMode = 'dark'
+        currentPageMode = 'dark';
     } else {
         styleSheet_link.setAttribute('href', '');
-        currentPageMode = 'light'
+        currentPageMode = 'light';
     }
-});
+    localStorage.setItem("pageMode", currentPageMode);
+}
+
+if (currentPageMode == 'light') {
+    styleSheet_link.setAttribute('href', '');
+} else if (currentPageMode == 'dark') {
+    styleSheet_link.setAttribute('href', './css/dark-login.css');
+}
+
+toggleMode_div.addEventListener('click', () => changePadeMode());
